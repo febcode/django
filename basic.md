@@ -25,29 +25,30 @@ Some companies that use the Django framework are Instagram, Mozilla, Disqus, Bit
 ### Q 4. What is the difference between a Project and an App?
 The main difference between a project and an app is that a project is defined as the entire application whereas, an app is part of the project that is self-sufficient to perform any task.
 
-Q 5. Explain Django’s architecture.
+### Q 5. Explain Django’s architecture.
 The Model-View-Template also known as MVT architecture is used by Django. It is a software design pattern for developing a web application. The Django MVT Structure is made up of three parts:
 
 The model will serve as an interface for your data. It is in charge of data management. A database represents the logical data structure that supports the entire application such as MySql and Postgres.
 The View is the user interface, that renders a website page in your browser. HTML/CSS/Javascript and Jinja files are used to represent it.
 A template is made up of both static sections of the desired HTML output and specific syntax that describes how dynamic content will be included.
 
-Q 6. What are the Features of using Django?
-Flexible server arrangement, 
-Model relation database 
-Provide object-relational mapper
-Web templating system
-Middleware class support
-Regex-based URL Dispatcher
-Unit testing framework
-Admin Interface
-Django is SEO optimized.
-In-build mitigation 
-Easy inheritance
-Q 7. Explain the Django project directory structure.
+### Q 6. What are the Features of using Django?
+- Flexible server arrangement, 
+- Model relation database 
+- Provide object-relational mapper
+- Web templating system
+- Middleware class support
+- Regex-based URL Dispatcher
+- Unit testing framework
+- Admin Interface
+- Django is SEO optimized.
+- In-build mitigation 
+- Easy inheritance
+
+### Q 7. Explain the Django project directory structure.
 When you first start a Django project, it comes with some basic files like manage.py and view.py.
 
-init.py – It’s an empty Python file. It is called when the package or one of its modules is imported. This file tells the Python interpreter that this directory is a package and that the presence of the __init.py_ file makes it a Python project.
+- init.py – It’s an empty Python file. It is called when the package or one of its modules is imported. This file tells the Python interpreter that this directory is a package and that the presence of the __init.py_ file makes it a Python project.
 manage.py – This file is used to interact with your project from the command line utility. with the help of this command, we can manage several commands such as: 
 manage.py runserver
 manage.py makemigration
