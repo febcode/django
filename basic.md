@@ -49,34 +49,43 @@ A template is made up of both static sections of the desired HTML output and spe
 When you first start a Django project, it comes with some basic files like manage.py and view.py.
 
 - init.py – It’s an empty Python file. It is called when the package or one of its modules is imported. This file tells the Python interpreter that this directory is a package and that the presence of the __init.py_ file makes it a Python project.
-manage.py – This file is used to interact with your project from the command line utility. with the help of this command, we can manage several commands such as: 
+- manage.py – This file is used to interact with your project from the command line utility. with the help of this command, we can manage several commands such as: 
+'''
 manage.py runserver
 manage.py makemigration
 manage.py migrate’ etc
-setting.py – It is the most important file in Django projects. It holds all the configuration values that your web app needs to work, i.e. pre-installed, apps, middleware, default database, API keys, and a bunch of other stuff. 
-views.py – The View shows the user the model’s data. The view knows how to get to the data in the model, but it has no idea what that data represents or what the user may do with it.
-urls.py – It is a universal resource locator which contains all the endpoints, we store all links of the project and functions to call it.
-models.py – The Model represents the models of web applications in the form of classes, it contains no logic that describes how to present the data to a user.
-wsgi.py – WSGI stands for Web Server Gateway Interface, This file is used for deploying the project in WSGI. It helps communication between your Django application and the web server. more…
-admin.py – It is used to create a superuser Registering model, login, and use the web application.
-app.py – It is a file that helps the user to include the application configuration for their app.
-Q 8. How do you create a Django project?
+'''
+- setting.py – It is the most important file in Django projects. It holds all the configuration values that your web app needs to work, i.e. pre-installed, apps, middleware, default database, API keys, and a bunch of other stuff. 
+- views.py – The View shows the user the model’s data. The view knows how to get to the data in the model, but it has no idea what that data represents or what the user may do with it.
+- urls.py – It is a universal resource locator which contains all the endpoints, we store all links of the project and functions to call it.
+- models.py – The Model represents the models of web applications in the form of classes, it contains no logic that describes how to present the data to a user.
+- wsgi.py – WSGI stands for Web Server Gateway Interface, This file is used for deploying the project in WSGI. It helps communication between your Django application and the web server. more…
+- admin.py – It is used to create a superuser Registering model, login, and use the web application.
+- app.py – It is a file that helps the user to include the application configuration for their app.
+
+### Q 8. How do you create a Django project?
 We can create a Django project with the help of the following command
-
+'''
 django-admin startproject projectname
-Q 9. How do you create a Django app?
+'''
+
+### Q 9. How do you create a Django app?
 We can create a Django app with the help of the following command
-
+'''
 python manage.py startapp appname
-Q 10. How do we start our development server?
-We can start our development server with the help of the following command
+'':
 
+### Q 10. How do we start our development server?
+We can start our development server with the help of the following command
+'''
 python manage.py runserver
-Q 11. Importance of virtual environment setup for Django.
+'''
+
+### Q 11. Importance of virtual environment setup for Django.
 A virtual environment allows you to establish separate dependencies of the different projects by creating an isolated environment that isn’t related to each other and can be quickly enabled and deactivated when you’re done.
 It is not necessary to use a virtual environment without a virtual environment we can work with Django projects. However, using virtualenv is thought to be the ideal practice. Because it eliminates dependencies and conflicts.
 
-Q 12. Give a brief about the Django admin interface.
+### Q 12. Give a brief about the Django admin interface.
 Django provides us with a default admin interface that is very helpful for creating, reading, updating, and deleting model objects that allow the user to do administrative tasks. It reads a set of data that explains and provides information about data from the model in order to create a quick interface where the user can alter the application’s contents. This is an in-built module.
 
 Q 13. What are Django URLs?
