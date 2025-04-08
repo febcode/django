@@ -199,83 +199,90 @@ We need to configure our database in the settings.py file. By default, SQLite is
 ### Q 31. Explain the caching strategies of Django. ?
 Django has its own inbuilt caching system that allows us to store our dynamic pages. So that we don’t have to request them again when we need them. The advantage of the Django Cache framework is that it allows us to cache data such as templates or the entire site. Django provides four different types of caching options, they are:
 
-per-site cache – It is the most straightforward to set up and caches your entire website.
-per-view cache – Individual views can be cached using the per-view cache.
-Template fragment caching allows you to cache only a portion of a template.
-low-level cache API – It can manually set, retrieve, and maintain particular objects in the cache using the low-level cache API.
-Q 32. Give the exception classes present in Django.
+- per-site cache – It is the most straightforward to set up and caches your entire website.
+- per-view cache – Individual views can be cached using the per-view cache.
+- Template fragment caching allows you to cache only a portion of a template.
+- low-level cache API – It can manually set, retrieve, and maintain particular objects in the cache using the low-level cache API.
+
+### Q 32. Give the exception classes present in Django.
 An exception is a rare occurrence that causes a program to fail. Django has its own exception classes to cope with this circumstance, and it also supports all fundamental Python exceptions. some of the exception classes are listed below:
 
-MultipleObjectsReturned – If just one item is anticipated but many objects are returned, this error is thrown by the query.
-ViewDoesNotExist – When a requested view does not exist, Django.URLs raise this exception.
-PermissionDenied – It’s triggered when a user doesn’t have the necessary permissions to perform the requested activity.
-SuspiciousOperation – The query throws this error if only one item is expected but several things are returned.
-ValidationError – It’s triggered when data validation fails on a form or a model field.
-FieldDoesNotExist – It raises when the requested field does not exist.
-ObjectDoesNotExist – The base class for DoesNotExist exceptions.
-AppRegistryNotReady – It is raised when attempting to use models before the app loading process.
-EmptyResultSet – If a query does not return any result, this exception is raised.
-Q 33. What is No SQL and Does Django support NoSQL?
+-? MultipleObjectsReturned – If just one item is anticipated but many objects are returned, this error is thrown by the query.
+- ViewDoesNotExist – When a requested view does not exist, Django.URLs raise this exception.
+- PermissionDenied – It’s triggered when a user doesn’t have the necessary permissions to perform the requested activity.
+- SuspiciousOperation – The query throws this error if only one item is expected but several things are returned.
+- ValidationError – It’s triggered when data validation fails on a form or a model field.
+- FieldDoesNotExist – It raises when the requested field does not exist.
+- ObjectDoesNotExist – The base class for DoesNotExist exceptions.
+- AppRegistryNotReady – It is raised when attempting to use models before the app loading process.
+- EmptyResultSet – If a query does not return any result, this exception is raised.
+
+### Q 33. What is No SQL and Does Django support NoSQL?
 NoSql is also known as a non-relational database that stores data in a form of non-tabular, instead it stores data in the form of a storage model that is optimized for specific requirements of the type of data being stored. The types of NoSQL databases include pure documented databases, graph databases, wide column databases, and a key-value store. 
 No, Django does not officially support no-SQL databases such as CouchDB, Redis, Neo4j, MongoDB, etc. 
 
-Q 34. What are the different model inheritance styles in Django?
+### Q 34. What are the different model inheritance styles in Django?
 Django supports 3 types of inheritance. They are
 
-Abstract base classes
-Multi-table Inheritance
-Proxy models
-Q 35. What databases are supported by Django?
+- Abstract base classes
+- Multi-table Inheritance
+- Proxy models.
+
+### Q 35. What databases are supported by Django?
 Databases that are supported by Django are SQLite(Inbuild), Oracle, PostgreSQL, and MySQL. Django also uses some third-party packages to handle databases including Microsoft SQL Server, IBM DB2, SAP SQL Anywhere, and Firebird. Django does not officially support no-SQL databases such as CouchDB, Redis, Neo4j, MongoDB, etc.
 
-Q 36. How would you query all the items in the database table?
+### Q 36. How would you query all the items in the database table?
 XYZ.objects.all()
  Where XYZ is some class created in the model.
 
-Q 37. How to query one item from the database table?
+### Q 37. How to query one item from the database table?
 XYZ.objects.get(id=1) 
 Where XYZ is some class created in the model.
 
-Q 38. What is Django Rest Framework
+### Q 38. What is Django Rest Framework
 The REST Framework is an HTTP-based standard for listing, generating, modifying, and deleting data on your server. The Django REST framework which is also known as DRF is a powerful and flexible toolkit built on top of the Django web framework that simplifies the creation of REST interfaces by reducing the amount of code required. there are different advantages of using REST Framework like:
 
 Web browsable API that provides huge usability for developer
 Authentication policy which includes packages for 0auth1 and auth2.
 It supports both ORM and non-ORM data sources.
 It has extensive documentation and great community support.
-Q 39. Explain the Django Response lifecycle.
+
+### Q 39. Explain the Django Response lifecycle.
 The Django Response lifecycle is responsible for data interchange between clients and servers with the help of the HttpRequest object, whenever a request is made by the client to the server it passes information through the system using request and response objects. these request/response objects are transmitted over the web which contains request metadata such as images, HTML, CSS, and javascript. These data are then loaded and presented to the user by Django, which passes the HttpRequest as the first argument to the view method. It is the responsibility of each view to return a HttpResponse object.
 
-Q 40. How do filter items in the Model?
+### Q 40. How do filter items in the Model?
 To filters items present in our database we use a QuerySet. It is a database collection of data that is built up as a list of objects. QuerySet makes our work easy by allowing us to filter and organize the data, it is also easier to retrieve the information that we need with the help of QuerySet. we can filter our data with the help filter() method that allows us to return only the rows that match the search word.
 
-Q 41. What is the difference between CharField and TextField in Django?
+### Q 41. What is the difference between CharField and TextField in Django?
 TextField is a database field that is used to store big amounts of text. Paragraphs, data, and other items can be saved. CharField should be used to hold tiny text such as First name and Last name. Let’s make a new instance of the TextField we just made and see whether it works.
 CharField is a string field, for small- to large-sized strings. It is generally used for storing small strings like first names, last names, etc. To store larger text TextField is used.
-Q 42. Give a brief about the settings.py file.
+
+### Q 42. Give a brief about the settings.py file.
 It’s the Django file’s main settings file, as the name says. Everything inside the Django project is saved in this file as a dictionary or list, including databases, middlewares, backend engines, templating engines, installed applications, static file URLs, main URL configurations, authorized hosts, servers, and security keys. When Django files are started, the settings.py file is first executed, followed by the loading of the appropriate databases and engines to swiftly serve the request.
 
-Q 43. What are Django cookies?
+### Q 43. What are Django cookies?
 A cookie is a piece of information stored in the client’s browser. To set and fetch cookies, Django provides built-in methods to use the set_cookie() method for setting a cookie and the get() method for getting the cookie. we can also use the request.COOKIES[‘key’] array to get cookie values.
 
-Q 44. How to check the version of Django installed on your system?
+### Q 44. How to check the version of Django installed on your system?
 Open the command prompt and enter the following command
 
 py -m django --version
-Q 45. Why is Django called a loosely coupled framework?
+
+### Q 45. Why is Django called a loosely coupled framework?
 Django is known as a loosely connected framework because of its MTV architecture. Django’s design is an MVC variant, and MTV is advantageous since it totally separates server code from the client’s hardware. The client machine has Models and Views, and templates are only returned to the client. All of the architectural elements make distinct from one another.
 
-Q 46. Explain Django Security.
+### Q 46. Explain Django Security.
 The security of users’ data is an important aspect of any website design. Django provides adequate security against a number of common threats. Django’s security features are as follows:
 
-Cross-site scripting (XSS) protection
-SQL injection protection
-Cross-site request forgery (CSRF) protection
-Enforcing SSL/HTTPS
-Session security
-Clickjacking protection
-Host header validation
-Q 47. Explain user authentication in Django
+- Cross-site scripting (XSS) protection
+- SQL injection protection
+- Cross-site request forgery (CSRF) protection
+- Enforcing SSL/HTTPS
+- Session security
+- Clickjacking protection
+- Host header validation
+
+## Q 47. Explain user authentication in Django
 Django comes with an authentication system configured by default to handle objects like users, groups, permissions, and so on. The authentication system’s core is made up of user objects. It not only authenticates users but also authorizes them. Aside from using the default, we can employ a variety of web apps instead of using the default system to enable more user authentication. The default system objects are as follows:
 
 Users
@@ -283,16 +290,16 @@ Permissions
 Groups
 Password Hashing System
 Forms Validation
-A pluggable backend system
-Q 48. What is the “Django.shortcuts.render” function?
+A pluggable backend system 
+
+### Q 48. What is the “Django.shortcuts.render” function?
 We need the render function when a View function produces a web page as a HttpResponse instead of a basic string. Render is a shortcut for passing a template and a data dictionary. This function combines templates with a data dictionary using a templating engine. Finally, render() provides a HttpResponse containing the rendered text as well as the data from the models.
 
 Syntax: render(request, template_name, context=None, content_type=None, status=None, using=None)
-Q 49. What is a context in Django?
+
+### Q 49. What is a context in Django?
 In Django, a context is a dictionary in which the keys represent variable names and the values reflect the values of those variables. This dictionary or context is supplied to the template, which finally outputs the dynamic content using the variables. i.e. {var1: 11, var2: 12}, when you pass this context to the template render method, {{ var1 }} would be replaced with 11 and {{ var2 }} with 12 in your template.
 
-Q 50. What is serialization in Django?
+### Q 50. What is serialization in Django?
 Serializers in the Django REST Framework are responsible for transforming objects into data types that javascript and front-end frameworks can understand. After validating the incoming data, serializers also enable deserialization, which allows parsed data to be transformed back into complex types.
 
-Conclusion
-At last, Aspiring Django developers can benefit from preparing for interviews by reviewing the top 50 most asked Django interview questions, ranging from basic to advanced topics, to help them crack their upcoming interviews. Additionally, understanding Django’s architecture, features, and project directory structure, as well as setting up a virtual environment, can help developers to 
