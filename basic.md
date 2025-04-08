@@ -166,13 +166,14 @@ Cross-Site Request Forgery (CSRF) is one of the most serious vulnerabilities, an
 ### Q 26. Explain the use of Middlewares in Django.
 Middleware is a lightweight plugin in Django that is used to keep the application secure during request and response processing. The application’s middleware is utilized to complete a task. Security, session, CSRF protection, and authentication are responsible for doing some specific functions. The application’s security is maintained by the usage of the middleware component, AuthenticationMiddleware which is associated with user requests using sessions.
 
-Q 27. What are ‘signals’?
+### Q 27. What are ‘signals’?
 Signals are used to take action in response to the modification or creation of a database entry. Its utilities help us to connect events with their action. we can create methods that will run a signal when it is called. For example, as soon as a new user instance is generated in the Database, one might want to create a profile instance. Generally, There are 3 types of signals.
 
-pre_delete/post_delete: This signal is thrown before the remove() method is used to delete a model’s instance.
-pre_init/post_init: This signal is thrown before/after instantiating a model (__init__() method)
-pre_save/post_save: This signal works before/after the method save().
-Q 28. What is Media Root?
+- pre_delete/post_delete: This signal is thrown before the remove() method is used to delete a model’s instance.
+- pre_init/post_init: This signal is thrown before/after instantiating a model (__init__() method)
+- pre_save/post_save: This signal works before/after the method save().
+
+### Q 28. What is Media Root?
 Media root is used to upload user-generated content. We can serve user-uploaded media files locally, using the MEDIA_ROOT and MEDIA_URL settings. User-upload these files are referred to as Media or Media Files in Django. The first step is to include the code below in the settings.py file.
 
 
