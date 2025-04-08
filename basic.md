@@ -1,4 +1,4 @@
-### Q 1. What is Django?
+2### Q 1. What is Django?
 Django is a Full-stack web development framework that facilitates the creation and maintenance of high-quality Dynamic pages while also encouraging rapid development and a clean, 
 pragmatic style. Django makes it easier to automate repeated operations, resulting in a more efficient development process with fewer lines of code. 
 
@@ -155,14 +155,15 @@ python manage.py createsuperuser
 Jinja is also known as jinja2, which is the most recent version. It’s a template engine that allows you to make HTML, XML, and other markup types. Jinja2 is valuable since it features a templating tag syntax and because the project has been extracted as a standalone open-source project that may be utilized as a dependency by other code libraries. Some of its features are:
 
 - HTML Escaping – It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
-Sandbox Execution – This is a framework for automating the testing process in a sandbox (or protected) environment.
-Template Inheritance
+- Sandbox Execution – This is a framework for automating the testing process in a sandbox (or protected) environment.
+- Template Inheritance
 Produces HTML templates far more quickly than the default engine.
 When compared to the default engine, it is easier to debug.
-Q 25. What do you mean by the csrf_token?
+
+### Q 25. What do you mean by the csrf_token?
 Cross-Site Request Forgery (CSRF) is one of the most serious vulnerabilities, and it can be used to do everything from changing a user’s information without their knowledge to obtaining full control of their account. To prevent malicious attacks, Django provides a per cent token per cent tag {% csrf_token %} that is implemented within the form. When generating the page on the server, it generates a token and ensures that any requests coming back in are cross-checked against this token. The token is not included in the inbound requests, thus they are not executed.
 
-Q 26. Explain the use of Middlewares in Django.
+### Q 26. Explain the use of Middlewares in Django.
 Middleware is a lightweight plugin in Django that is used to keep the application secure during request and response processing. The application’s middleware is utilized to complete a task. Security, session, CSRF protection, and authentication are responsible for doing some specific functions. The application’s security is maintained by the usage of the middleware component, AuthenticationMiddleware which is associated with user requests using sessions.
 
 Q 27. What are ‘signals’?
