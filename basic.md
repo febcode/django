@@ -88,65 +88,73 @@ It is not necessary to use a virtual environment without a virtual environment w
 ### Q 12. Give a brief about the Django admin interface.
 Django provides us with a default admin interface that is very helpful for creating, reading, updating, and deleting model objects that allow the user to do administrative tasks. It reads a set of data that explains and provides information about data from the model in order to create a quick interface where the user can alter the application’s contents. This is an in-built module.
 
-Q 13. What are Django URLs?
+### Q 13. What are Django URLs?
 The routing of a website is determined by its URLs. In the program, we build a python module or a file called urls.py. The navigation of your website is determined by this file. When a user visits a given URL route in the browser, the URLs in the urls.py file are compared. The user then receives the response for the requested URL after retrieving a corresponding view method.
 
-Q 14. What are the views of Django?
+### Q 14. What are the views of Django?
 Django views are an important feature of the MVT Structure. This is a function or class that takes a web request and delivers a Web response, according to the Django script. This response could be an HTML template, a content of a Web page, an XML document, a PDF, or images. the view is a part of the user interface that renders the HTML/CSS/Javascript in your Template files into what you see in your browser when we render a web page.
 
-Q 15. What are the models in Django?
+### Q 15. What are the models in Django?
 Model is a built-in feature of Django that contain a definitive source of information such as behavior and essential fields about the data we are storing. It allows us to build tables, fields, and constraints and organize tables into models. Generally, each model maps to a single database table. To use Django Models, you’ll need a project and an app to work with. Also, Django makes use of SQL to access the database. SQL is a complex language with many queries for generating, removing, updating, and other database-related tasks.
 
-Q 16. What do the following commands do?
+### Q 16. What do the following commands do?
 python manage.py makemigrations
 python manage.py migrate
 The makemigration command scans the model in your application and generates a new set of migrations based on the model file modifications. This command generates the SQL statement, and when we run it, we obtain a new migration file. After running this command, no tables will be created in the database.
 
 Running migrate command helps us to make these modifications to our database. The migrate command runs the SQL instructions (produced by makemigrations) and applies the database changes. After running this command, tables will be created.
 
-Q 17. What are the sessions?
+### Q 17. What are the sessions?
 Sessions are the technique for keeping track of a site’s and a browser’s state. During the session, the user data is stored in sessions, which are server-side files. The session ends when the user closes the browser or logs out of the program. Within a session, we can keep as much data as we want, We must use the session start() method to start the session. There is one advantage of using a session is that the data is stored in an encrypted format.
 
-Q 18. Define static files and explain their uses.
+### Q 18. Define static files and explain their uses.
 Static files are used to save files such as CSS, JavaScript, pictures, and other types of static files. We keep them in distinct folders, for as the js folder, which has all of the JavaScript files, and the images folder, which contains all of the images. These files are kept in the static subfolder of the project app. Django provides django.contrib.staticfiles which helps us to manage static files. There are different uses for static files:
 
 It clarifies the use of file methods and attributes.
 It is platform-independent in many ways, whereas generic files are not.
 Subclasses can be used to extend it.
-Q 19. What are templates in the Django language?
+
+### Q 19. What are templates in the Django language?
 A Django template is a text document that is used to give a front and a layout for our website. It is the third and most significant aspect of Django’s MVT Structure. In Django, a template is an HTML file that contains HTML, CSS, and Javascript. The Django framework efficiently manages and generates dynamically generated HTML web pages for end-user viewing. Django is mostly a backend framework, thus we use templates to give a layout for our website. There are two ways to incorporate the template into our website.
 
 We can utilize a single template directory that will be distributed throughout the project.
 We can make a separate template directory for each app in our project.
-Intermediate Django Interview Questions & Answers
+
+
+## Intermediate Django Interview Questions & Answers
 
 Django Interview Questions and Answers
 
-Q 20. What does the settings.py file do?
+### Q 20. What does the settings.py file do?
 settings.py is a core file in Django projects. It holds all the configuration values that your web app needs to work; database settings, logging configuration, where to find static files, API keys if you work with external APIs, and a bunch of other stuff.
 
-Q 21. Difference between MVC and MVT design patterns?
-Model and View are both driven by the controller in MVC, whereas Views in MVT are used to receive HTTP requests and return HTTP responses.
-We must write all of the control-specific code in MVC whereas, We must write all of the control-specific code in the View and Template components in MVT.
-MVC is Highly coupled whereas, MVT is loosely coupled.
-In MVC, it is difficult to modify whereas, Modification is easy in MVT.
-MVC is suitable for large applications, but MVT is suitable for both small and large applications.
-MVC does not involve any URL mapping, whereas in MVT URL pattern mapping takes place.
-Flow is clear and easy to understand, whereas MVT is sometimes harder to understand.
-Q 22. What is Django ORM?
+### Q 21. Difference between MVC and MVT design patterns?
+- Model and View are both driven by the controller in MVC, whereas Views in MVT are used to receive HTTP requests and return HTTP responses.
+- We must write all of the control-specific code in MVC whereas, We must write all of the control-specific code in the View and Template components in MVT.
+- MVC is Highly coupled whereas, MVT is loosely coupled.
+- In MVC, it is difficult to modify whereas, Modification is easy in MVT.
+- MVC is suitable for large applications, but MVT is suitable for both small and large applications.
+- MVC does not involve any URL mapping, whereas in MVT URL pattern mapping takes place.
+- Flow is clear and easy to understand, whereas MVT is sometimes harder to understand.
+
+### Q 22. What is Django ORM?
 ORM which is also known as the object relation model enables us to interact with our database. It allows us to add, delete, change, and query objects (Object Relational Mapper). Django uses a database abstraction API called ORM to interface Viewed with its database models, to use Django object relation Models, we must first have a project and an app running. Models can be created in app/models.py after an app has been started. The Django ORM may be accessed by running the following command in our project directory.
 
+'''
 python manage.py shell
+'''
 This opens a Python console where we may add objects, retrieve objects, modify existing items, and delete objects. 
 
-Q 23. What is Superuser?
+### Q 23. What is Superuser?
 superuser is the most powerful user with permission to create, read, delete, and update on the admin page which includes model records and another user. Users of Django have access to an Admin Panel. Before using this feature, you must have to migrate your project; otherwise, the superuser database will not be created. To create a superuser,  first, reach the same directory, and run the following command
-
+’’’
 python manage.py createsuperuser
-Q 24. What is Jinja templating?
+'''
+
+### Q 24. What is Jinja templating?
 Jinja is also known as jinja2, which is the most recent version. It’s a template engine that allows you to make HTML, XML, and other markup types. Jinja2 is valuable since it features a templating tag syntax and because the project has been extracted as a standalone open-source project that may be utilized as a dependency by other code libraries. Some of its features are:
 
-HTML Escaping – It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
+- HTML Escaping – It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
 Sandbox Execution – This is a framework for automating the testing process in a sandbox (or protected) environment.
 Template Inheritance
 Produces HTML templates far more quickly than the default engine.
