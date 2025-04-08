@@ -176,25 +176,27 @@ Signals are used to take action in response to the modification or creation of a
 ### Q 28. What is Media Root?
 Media root is used to upload user-generated content. We can serve user-uploaded media files locally, using the MEDIA_ROOT and MEDIA_URL settings. User-upload these files are referred to as Media or Media Files in Django. The first step is to include the code below in the settings.py file.
 
-
+’’’
 MEDIA_ROOT = os.path.join(BASE_DIR, ‘media’)
 MEDIA_URL = ‘/media/’
-
+’’’
 
 MEDIA_ROOT: It is for the server path to store files in the computer.
 MEDIA_URL: It is the referring URL for the browser to access the files over HTTP.
 
-Q 29. How you can include and inherit files in your application?
+### Q 29. How you can include and inherit files in your application?
 Using the extends tag in Templates, we can inherit our files in Django, The extends tag is used to inherit these templates. The syntax for inheriting these templates is given as:
-
+'''
 {% extends 'template_name.html' %} 
+'''
+
 This syntax helps us to add all the elements of an HTML file into another without copy-pasting the entire code. Django templates not only allow us to pass variables from view to template, but they also provide some programming capabilities like loops, comments, and extensions.
 
-Q 30. How do you connect your Django Project to the database?
+### Q 30. How do you connect your Django Project to the database?
 We need to configure our database in the settings.py file. By default, SQLite is mentioned there, and we need to change this setting accordingly like Postgres, MongoDB, and MySql.
 
-Advanced Django Interview Questions & Answers
-Q 31. Explain the caching strategies of Django. ?
+## Advanced Django Interview Questions & Answers
+### Q 31. Explain the caching strategies of Django. ?
 Django has its own inbuilt caching system that allows us to store our dynamic pages. So that we don’t have to request them again when we need them. The advantage of the Django Cache framework is that it allows us to cache data such as templates or the entire site. Django provides four different types of caching options, they are:
 
 per-site cache – It is the most straightforward to set up and caches your entire website.
